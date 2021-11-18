@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class HeadController : MonoBehaviour
 {
+    public Directions direction ;//= Random.Range(0, (int) Directions.Count);
+    [Range(0f, 1f)] public float moveFrequency;
     [Range(0f, 1f)] public float moveAmount;
+    [SerializeField] public GameObject bodyPrefab;
+    
     void Start()
     {
         

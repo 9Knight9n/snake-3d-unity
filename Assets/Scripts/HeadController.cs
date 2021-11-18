@@ -20,5 +20,13 @@ public class HeadController : MonoBehaviour
         {
             transform.position += new Vector3(-moveAmount, 0, 0);
         }
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.position += new Vector3(0, 0, moveAmount);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.position += new Vector3(0, 0, -moveAmount);
+        }
     }
 }

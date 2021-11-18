@@ -39,7 +39,7 @@ public class MovableObject : MonoBehaviour
     
     
     
-    protected void ChangeDir(Directions dir)
+    protected virtual void ChangeDir(Directions dir)
     {
         oldDirection = direction;
         direction = dir;

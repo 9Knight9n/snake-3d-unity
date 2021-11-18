@@ -11,6 +11,8 @@ public class HeadController : MovableObject
     [Range(0f, 1f)] public float moveFreq;
     public float counter;
 
+    private bool _canChangeDir;
+
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class HeadController : MovableObject
     {
         base.Awake();
         counter = 0f;
+        _canChangeDir = true;
         direction = Directions.Right;//(Directions) Random.Range(0, (int) Directions.Count);
         oldDirection = direction;
         Init(direction, transform.position);
@@ -30,16 +33,23 @@ public class HeadController : MovableObject
     { 
         if (CanMove()) 
             Move();
+        if (_canChangeDir)
+        {
+            if (Input.GetKeyDown(KeyCode.D) && direction!=Directions.Left)
+                ChangeDir(Directions.Right);
+            if (Input.GetKeyDown(KeyCode.A) && direction!=Directions.Right)
+                ChangeDir(Directions.Left);
+            if (Input.GetKeyDown(KeyCode.W) && direction!=Directions.Down)
+                ChangeDir(Directions.Up);
+            if (Input.GetKeyDown(KeyCode.S) && direction!=Directions.Up)
+                ChangeDir(Directions.Down);
+        }
+    }
 
-
-        if (Input.GetKeyDown(KeyCode.D) && direction!=Directions.Left)
-            ChangeDir(Directions.Right);
-        if (Input.GetKeyDown(KeyCode.A) && direction!=Directions.Right)
-            ChangeDir(Directions.Left);
-        if (Input.GetKeyDown(KeyCode.W) && direction!=Directions.Down)
-            ChangeDir(Directions.Up);
-        if (Input.GetKeyDown(KeyCode.S) && direction!=Directions.Up)
-            ChangeDir(Directions.Down);
+    protected override void ChangeDir(Directions dir)
+    {
+        base.ChangeDir(dir);
+        _canChangeDir = false;
     }
     
     
@@ -50,6 +60,7 @@ public class HeadController : MovableObject
         if (counter >= moveFreq)
         {
             counter = 0f;
+            _canChangeDir = true;
             return true;
         }
         return false;

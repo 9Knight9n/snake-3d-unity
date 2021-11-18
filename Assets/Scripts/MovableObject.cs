@@ -9,7 +9,7 @@ public class MovableObject : MonoBehaviour
     public Directions oldDirection;
     
     [Range(0f, 1f)] private float _moveAmount;
-    private List<Vector3> _directions;
+    protected List<Vector3> directions;
     
     [SerializeField] public GameObject nextNode;
     
@@ -22,7 +22,7 @@ public class MovableObject : MonoBehaviour
     {
         _moveAmount = 0.5f;
         Debug.Log(name+" move Amount :"+_moveAmount);
-        _directions = new List<Vector3>()
+        directions = new List<Vector3>()
         {
             new Vector3(0f,0f,_moveAmount),
             new Vector3(0f,0f,-_moveAmount),
@@ -47,15 +47,10 @@ public class MovableObject : MonoBehaviour
     
     protected void Move()
     {
-        Debug.Log("it's "+name);
-        
-        transform.Translate(_directions[(int) direction]);
-        Debug.Log("it's "+name+" went "+direction);
+        transform.Translate(directions[(int) direction]);
         if (nextNode != null)
         {
-            Debug.Log("it's "+name+" my child is "+nextNode.name);
             nextNode.GetComponent<MovableObject>().ChangeDir(oldDirection);
-            Debug.Log("it's "+name+" my child is "+nextNode.name+" told him to go"+oldDirection);
             oldDirection = direction;
             nextNode.GetComponent<MovableObject>().Move();
         }
@@ -65,9 +60,12 @@ public class MovableObject : MonoBehaviour
     {
         oldDirection = dir;
         direction = dir;
+        transform.position = tra;
         if (nextNode != null)
         {
-            nextNode.GetComponent<MovableObject>().Init(dir,tra);
+            Vector3 newTra = tra - directions[(int) dir];
+            newTra[1] = nextNode.transform.position[1];
+            nextNode.GetComponent<MovableObject>().Init(dir,newTra);
         }
     }
     

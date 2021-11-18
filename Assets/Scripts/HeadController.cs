@@ -23,7 +23,7 @@ public class HeadController : MovableObject
         counter = 0f;
         direction = Directions.Right;//(Directions) Random.Range(0, (int) Directions.Count);
         oldDirection = direction;
-        Init(direction, new Vector3());
+        Init(direction, transform.position);
     }
 
     void Update()

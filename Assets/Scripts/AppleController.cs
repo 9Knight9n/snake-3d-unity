@@ -18,10 +18,10 @@ public class AppleController : FoodInstanceController
         Renderer rend = platform.GetComponent<Renderer>();
         Vector3 max = rend.bounds.max;
         Vector3 min = rend.bounds.min;
-        _maxX = max[0];
-        _minX = min[0];
-        _maxY = max[2];
-        _minY = min[2];
+        _maxX = max[0]-2;
+        _minX = min[0]+2;
+        _maxY = max[2]-2;
+        _minY = min[2]+2;
         
         Debug.Log("_maxX "+_maxX);
         Debug.Log("_minX "+_minX);
@@ -46,6 +46,10 @@ public class AppleController : FoodInstanceController
         if (other.gameObject.CompareTag(Tags.Head.ToString()) || other.gameObject.CompareTag(Tags.Body.ToString()) )
         {
             transform.position = GetNewPlace();
+            if (other.gameObject.CompareTag(Tags.Head.ToString()))
+            {
+                CustomEventSystem.current.onFoodCollect.Invoke(config.lengthAdded);
+            }
         }
     }
 }

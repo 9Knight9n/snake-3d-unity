@@ -8,6 +8,7 @@ TagManager:
   - Snake
   - Head
   - Body
+  - Food
   layers:
   - Default
   - TransparentFX

@@ -8,4 +8,5 @@ public enum Tags
     Head,
     Body,
     Snake,
+    Food,
 }

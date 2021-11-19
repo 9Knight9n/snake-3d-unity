@@ -7,5 +7,5 @@ public class FoodConfig : ScriptableObject
 {
     public string foodName;
     public int lengthAdded;
-    public int score;
+    public int score;   
 }

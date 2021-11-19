@@ -65,5 +65,5 @@ public class HeadController : MovableObject
         }
         return false;
     }
-
+    
 }

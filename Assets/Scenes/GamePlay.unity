@@ -237,6 +237,63 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!1 &198728731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198728732}
+  - component: {fileID: 198728733}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198728732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198728731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.482542, y: 7.729993, z: 18.053778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198728733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198728731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda64d0056451a84597e1fdff73de724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onFoodCollect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &306190450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,10 +306,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple
       objectReference: {fileID: 0}
+    - target: {fileID: 5015815163072029440, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.2
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
         type: 3}
@@ -469,6 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 953634914146221064, guid: f8bbb802c9678fd4a847a7c01e54e534, type: 3}
+    - {fileID: 4002513664956754066, guid: f8bbb802c9678fd4a847a7c01e54e534, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f8bbb802c9678fd4a847a7c01e54e534, type: 3}
 --- !u!1 &561744156 stripped
 GameObject:
@@ -482,6 +545,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 561744155}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &561744158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561744156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c421cfcc1b6703d44b7f6d3906f361ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
+  oldDirection: 0
+  nextNode: {fileID: 0}
+  preNode: {fileID: 94141419}
+  bodyPrefab: {fileID: 194808991075724398, guid: f8bbb802c9678fd4a847a7c01e54e534,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +992,7 @@ GameObject:
   - component: {fileID: 2024112730}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Snake
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

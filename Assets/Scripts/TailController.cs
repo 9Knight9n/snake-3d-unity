@@ -19,17 +19,20 @@ public class TailController : MovableObject
 
     private void AddNode(int addedLength)
     {
-        GameObject tailNode = preNode.GetComponent<MovableObject>().nextNode;
-        GameObject newNode = Instantiate(bodyPrefab);
-        newNode.transform.SetParent(GameObject.FindGameObjectWithTag(Tags.Snake.ToString()).transform,false);
-        newNode.transform.position = transform.position;
-        newNode.GetComponent<MovableObject>().direction = direction;
-        newNode.GetComponent<MovableObject>().oldDirection = oldDirection;
-        transform.position -= directions[(int) direction];
+        for (int i = 0; i < addedLength; i++)
+        {
+            GameObject tailNode = preNode.GetComponent<MovableObject>().nextNode;
+            GameObject newNode = Instantiate(bodyPrefab);
+            newNode.transform.SetParent(GameObject.FindGameObjectWithTag(Tags.Snake.ToString()).transform,false);
+            newNode.transform.position = transform.position;
+            newNode.GetComponent<MovableObject>().direction = direction;
+            newNode.GetComponent<MovableObject>().oldDirection = oldDirection;
+            transform.position -= directions[(int) direction];
         
-        preNode.GetComponent<MovableObject>().nextNode = newNode;
-        newNode.GetComponent<MovableObject>().nextNode = tailNode;
-        preNode = newNode;
+            preNode.GetComponent<MovableObject>().nextNode = newNode;
+            newNode.GetComponent<MovableObject>().nextNode = tailNode;
+            preNode = newNode;
+        }
     }
 
 }

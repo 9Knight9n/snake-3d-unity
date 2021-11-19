@@ -9,6 +9,8 @@ TagManager:
   - Head
   - Body
   - Food
+  - Big Apple
+  - Half Apple
   layers:
   - Default
   - TransparentFX

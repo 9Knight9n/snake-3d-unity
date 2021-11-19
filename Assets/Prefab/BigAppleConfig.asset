@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BigAppleConfig
   m_EditorClassIdentifier: 
   foodName: Big Apple
-  lengthAdded: 1
-  score: 20
+  lengthAdded: 2
+  score: 30

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 567854497087207424}
   - component: {fileID: 2307421778607951050}
   - component: {fileID: 662308101460970825}
+  - component: {fileID: 3765806618266819776}
   m_Layer: 0
   m_Name: BigApple
-  m_TagString: Food
+  m_TagString: Big Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,3 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: dc60394f57323be40977e765495f47a2, type: 2}
+--- !u!135 &3765806618266819776
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252919299116821791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09814727
+  m_Center: {x: 0, y: 0.09537669, z: 0}

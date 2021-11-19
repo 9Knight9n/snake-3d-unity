@@ -21,7 +21,7 @@ public class AppleController : FoodInstanceController
     }
     
 
-    private void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(Tags.Head.ToString()) || other.gameObject.CompareTag(Tags.Body.ToString()) )
         {

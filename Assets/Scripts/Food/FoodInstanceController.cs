@@ -42,4 +42,17 @@ public class FoodInstanceController : MonoBehaviour
     {
         transform.position = GetNewPlace();
     }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(Tags.Head.ToString()))
+        {
+            CustomEventSystem.current.onFoodCollect.Invoke(config.lengthAdded);
+            GameObject.FindGameObjectWithTag(tag).SetActive(false);
+        }
+        else if (other.gameObject.CompareTag(Tags.Body.ToString()))
+        {
+            ChangePlace();
+        }
+    }
 }

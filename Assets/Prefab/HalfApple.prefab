@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6953442530212388708}
   - component: {fileID: 5159823806490471342}
   - component: {fileID: 6060344378307360234}
+  - component: {fileID: -1684288259757460773}
   m_Layer: 0
   m_Name: HalfApple
-  m_TagString: Food
+  m_TagString: Half Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6673098909299526267}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.13107413, y: -0.5121257, z: -0.065835886, w: 0.84629345}
+  m_LocalPosition: {x: 0.05668625, y: 0.032321334, z: -0.1385641}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.883, y: -63.484, z: -14.399001}
 --- !u!33 &6953442530212388708
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: ea36eacd64578b945ab535c83bf79c93, type: 2}
+--- !u!135 &-1684288259757460773
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6673098909299526267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09814727
+  m_Center: {x: 0.049073637, y: 0.09537669, z: 0}

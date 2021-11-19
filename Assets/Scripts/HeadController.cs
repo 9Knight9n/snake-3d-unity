@@ -68,25 +68,17 @@ public class HeadController : MovableObject
 
     private void OnTriggerEnter(Collider other)
     {
-        {
-            if (other.gameObject.CompareTag(Tags.DeathZone.ToString()))
-            {
-                CustomEventSystem.current.onEndGame.Invoke();
-                Time.timeScale = 0;
-            }
 
+        if (other.gameObject.CompareTag(Tags.DeathZone.ToString()))
+        {
+            CustomEventSystem.current.onEndGame.Invoke();
+            Time.timeScale = 0;
         }
-    }
 
-    private void OnCollisionEnter(Collision other)
-    {
+        if (other.gameObject.CompareTag(Tags.Body.ToString()))
         {
-            if (other.gameObject.CompareTag(Tags.DeathZone.ToString()))
-            {
-                CustomEventSystem.current.onEndGame.Invoke();
-                Time.timeScale = 0;
-            }
-
+            CustomEventSystem.current.onEndGame.Invoke();
+            Time.timeScale = 0;
         }
     }
 }

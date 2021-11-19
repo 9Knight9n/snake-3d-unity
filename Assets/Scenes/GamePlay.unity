@@ -690,7 +690,7 @@ MonoBehaviour:
   bigAppleFreqMax: 0
   bigApplePrefab: {fileID: 4252919299116821791, guid: 72562d1428a12bb4ab197318d04391a4,
     type: 3}
-  HalfApplePrefab: {fileID: 6673098909299526267, guid: 79d7ddefcad4402459adc512e8a57d80,
+  halfApplePrefab: {fileID: 6673098909299526267, guid: 79d7ddefcad4402459adc512e8a57d80,
     type: 3}
 --- !u!4 &736717134
 Transform:

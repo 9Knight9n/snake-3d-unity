@@ -21,6 +21,7 @@ public class TailController : MovableObject
     {
         GameObject tailNode = preNode.GetComponent<MovableObject>().nextNode;
         GameObject newNode = Instantiate(bodyPrefab);
+        newNode.transform.SetParent(GameObject.FindGameObjectWithTag(Tags.Snake.ToString()).transform,false);
         newNode.transform.position = transform.position;
         newNode.GetComponent<MovableObject>().direction = direction;
         newNode.GetComponent<MovableObject>().oldDirection = oldDirection;

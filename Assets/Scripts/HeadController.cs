@@ -24,7 +24,7 @@ public class HeadController : MovableObject
         base.Awake();
         counter = 0f;
         _canChangeDir = true;
-        direction = Directions.Right;//(Directions) Random.Range(0, (int) Directions.Count);
+        direction = (Directions) Random.Range(0, (int) Directions.Count);
         oldDirection = direction;
         Init(direction, transform.position);
     }

@@ -48,6 +48,7 @@ public class FoodInstanceController : MonoBehaviour
         if (other.gameObject.CompareTag(Tags.Head.ToString()))
         {
             CustomEventSystem.current.onFoodCollect.Invoke(config.lengthAdded);
+            CustomEventSystem.current.onScoreChange.Invoke(config.score);
             GameObject.FindGameObjectWithTag(tag).SetActive(false);
         }
         else if (other.gameObject.CompareTag(Tags.Body.ToString()))

@@ -29,6 +29,7 @@ public class AppleController : FoodInstanceController
             if (other.gameObject.CompareTag(Tags.Head.ToString()))
             {
                 CustomEventSystem.current.onFoodCollect.Invoke(config.lengthAdded);
+                CustomEventSystem.current.onScoreChange.Invoke(config.score);
             }
         }
     }

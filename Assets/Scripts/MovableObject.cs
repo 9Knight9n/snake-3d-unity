@@ -68,5 +68,5 @@ public class MovableObject : MonoBehaviour
             nextNode.GetComponent<MovableObject>().Init(dir,newTra);
         }
     }
-    
+
 }

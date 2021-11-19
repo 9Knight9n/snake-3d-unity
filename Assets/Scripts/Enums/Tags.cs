@@ -9,4 +9,5 @@ public enum Tags
     Body,
     Snake,
     Food,
+    DeathZone,
 }

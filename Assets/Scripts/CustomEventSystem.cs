@@ -12,17 +12,15 @@ public class MyTextEvent : UnityEvent<string> {}
 public class CustomEventSystem : MonoBehaviour
 {
     public static CustomEventSystem current;
-    //public UnityEvent OnCloneStickyPlatformEnter;
     public MyIntEvent onFoodCollect;
-    //public MyTextEvent onHintChange;
-    //public MyTextEvent onEndGame;
+    public MyIntEvent onScoreChange;
+    public UnityEvent onEndGame;
 
     void Awake()
     {
         current = this;
-        //OnCloneStickyPlatformEnter = new UnityEvent();
         onFoodCollect = new MyIntEvent();
-        //onHintChange = new MyTextEvent();
-        //onEndGame = new MyTextEvent();
+        onScoreChange = new MyIntEvent();
+        onEndGame = new UnityEvent();
     }
 }

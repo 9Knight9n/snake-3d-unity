@@ -11,6 +11,7 @@ TagManager:
   - Food
   - Big Apple
   - Half Apple
+  - DeathZone
   layers:
   - Default
   - TransparentFX

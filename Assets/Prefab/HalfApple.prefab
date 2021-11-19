@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6327641823932584129}
   - component: {fileID: 6953442530212388708}
   - component: {fileID: 5159823806490471342}
+  - component: {fileID: 6060344378307360234}
   m_Layer: 0
-  m_Name: appleHalf
+  m_Name: HalfApple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6060344378307360234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6673098909299526267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe1d75bab375f54a9b361381c929ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: ea36eacd64578b945ab535c83bf79c93, type: 2}

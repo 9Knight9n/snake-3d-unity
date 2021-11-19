@@ -237,6 +237,108 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!1001 &306190450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5015815163072029440, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_Name
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679058905340934586, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -7382244135683978814, guid: 8f030fcf93c0ffa4db8d172853c985ae, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 8f030fcf93c0ffa4db8d172853c985ae, type: 3}
+--- !u!1 &306190451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5015815163072029440, guid: 8f030fcf93c0ffa4db8d172853c985ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 306190450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &306190452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306190451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7febfbcf1f3e7428030c1dc6e92dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: a9959d30dc279f147a1ba1ef40704f19, type: 2}
+--- !u!135 &306190453
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306190451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09814727
+  m_Center: {x: 0, y: 0.09537669, z: 0}
 --- !u!1 &424166471
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +351,7 @@ GameObject:
   - component: {fileID: 424166473}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Snake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,6 +603,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b349925b0493fbf4aa24dc64f81c5635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  halfAppleCounter: 0
+  bigAppleCounter: 0
+  halfAppleFreqMax: 0
+  bigAppleFreqMax: 0
+  bigApplePrefab: {fileID: 4252919299116821791, guid: 72562d1428a12bb4ab197318d04391a4,
+    type: 3}
+  HalfApplePrefab: {fileID: 6673098909299526267, guid: 79d7ddefcad4402459adc512e8a57d80,
+    type: 3}
 --- !u!4 &736717134
 Transform:
   m_ObjectHideFlags: 0
@@ -801,7 +911,7 @@ GameObject:
   - component: {fileID: 2024112730}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Snake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

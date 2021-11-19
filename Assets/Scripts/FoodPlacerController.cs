@@ -9,9 +9,12 @@ public class FoodPlacerController : MonoBehaviour
     [Range(0f, 20f)] public float halfAppleFreqMax;
     [Range(0f, 20f)] public float bigAppleFreqMax;
 
+    [SerializeField] private GameObject bigApplePrefab;
+    [SerializeField] private GameObject HalfApplePrefab;
+
     private float halfAppleFreq;
     private float bigAppleFreq;
-
+    
 
     // Start is called before the first frame update
     void Start()

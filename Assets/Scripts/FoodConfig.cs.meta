@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: b349925b0493fbf4aa24dc64f81c5635
+guid: 6189fdfa7a1683e48a04a9d9a2c7b5c9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - bigApplePrefab: {instanceID: 0}
-  - HalfApplePrefab: {instanceID: 0}
-  - Apple: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

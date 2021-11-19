@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3480921035848726437}
   - component: {fileID: 567854497087207424}
   - component: {fileID: 2307421778607951050}
+  - component: {fileID: 662308101460970825}
   m_Layer: 0
-  m_Name: apple 1
+  m_Name: BigApple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &662308101460970825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252919299116821791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe1d75bab375f54a9b361381c929ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: dc60394f57323be40977e765495f47a2, type: 2}

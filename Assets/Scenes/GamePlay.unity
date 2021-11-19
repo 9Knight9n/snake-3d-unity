@@ -334,8 +334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.7, y: 106.8}
-  m_SizeDelta: {x: 184.61642, y: 90.81636}
+  m_AnchoredPosition: {x: 195.1, y: 78.35}
+  m_SizeDelta: {x: 184.61642, y: 171.51305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245385314
 MonoBehaviour:
@@ -358,7 +358,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1144,7 +1144,6 @@ GameObject:
   - component: {fileID: 1544178213}
   - component: {fileID: 1544178212}
   - component: {fileID: 1544178211}
-  - component: {fileID: 1544178215}
   m_Layer: 0
   m_Name: Death Zone
   m_TagString: DeathZone
@@ -1160,7 +1159,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544178210}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1226,18 +1225,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1544178215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544178210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61d6e60768f26554aaead04e30602e56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1576617132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1437,8 +1424,8 @@ GameObject:
   - component: {fileID: 2024112729}
   - component: {fileID: 2024112732}
   - component: {fileID: 2024112731}
-  - component: {fileID: 2024112733}
   - component: {fileID: 2024112730}
+  - component: {fileID: 2024112733}
   m_Layer: 0
   m_Name: Head
   m_TagString: Head
@@ -1468,7 +1455,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024112728}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
